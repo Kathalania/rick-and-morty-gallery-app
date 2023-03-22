@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Gallery from "./Gallery";
+import Header from "./Header";
+import {Character} from "./CharacterModel";
 
 function App() {
 
@@ -1131,23 +1133,10 @@ function App() {
         }
     ]
 
-    type Character = {
-        id: number,
-        name: string,
-        status: string,
-        species: string,
-        type: string,
-        gender: string,
-        origin: { name: string, url: string }
-        location: { name: string, url: string }
-        image: string,
-        episode: string [],
-        url: string,
-        created: string
-    }
+
     return (
         <div className="App">
-            <h1>Rick & Morty Gallery App</h1>
+            <Header/>
             <div>
                 <Gallery galleryToShow={characterArray}/>
             </div>
@@ -1157,3 +1146,4 @@ function App() {
 }
 
 export default App;
+
